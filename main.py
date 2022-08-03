@@ -5,7 +5,7 @@ import sys
 class Ui(QtWidgets.QMainWindow):
     def __init__(self):
         super(Ui, self).__init__()
-        uic.loadUi("maincalc.ui", self)
+        uic.loadUi('maincalc.ui', self)
         self.show()
 
 calc = QtWidgets.QApplication(sys.argv)
