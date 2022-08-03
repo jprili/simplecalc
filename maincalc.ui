@@ -30,7 +30,7 @@
       <x>340</x>
       <y>10</y>
       <width>281</width>
-      <height>411</height>
+      <height>381</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -39,11 +39,32 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="decimal">
+    <widget class="QWidget" name="compute">
      <attribute name="title">
-      <string>Decimal</string>
+      <string>Compute</string>
      </attribute>
-     <widget class="QTextEdit" name="textEdit">
+     <widget class="QTextEdit" name="plainTextDec">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>281</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="placeholderText">
+       <string>Write expression here</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="graph">
+     <attribute name="title">
+      <string>Graph</string>
+     </attribute>
+     <widget class="QPlainTextEdit" name="plainTextBin">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -52,20 +73,8 @@
         <height>381</height>
        </rect>
       </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="binary">
-     <attribute name="title">
-      <string>Binary</string>
-     </attribute>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>281</width>
-        <height>381</height>
-       </rect>
+      <property name="placeholderText">
+       <string>Write expression here</string>
       </property>
      </widget>
     </widget>
@@ -78,6 +87,19 @@
       <width>321</width>
       <height>201</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushRun">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>400</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run</string>
     </property>
    </widget>
   </widget>
