@@ -1,22 +1,27 @@
-from PyQt5 import QtWidgets, uic
+from PyQt5.QtWidgets import *
+from PyQt5 import uic
 import sys
 
 
-class Ui(QtWidgets.QMainWindow):
+class Ui(QMainWindow):
 
     def __init__(self):
         super(Ui, self).__init__()
         uic.loadUi('maincalc.ui', self)
         self.show()
+        self.pushRun.clicked.connect(self.runcalc)
 
-    def runCalc(self):
-        return None
+    def runcalc(self):
+        if self.tabWidget.currentIndex() == 0:
+            print(0)
+        elif self.tabWidget.currentIndex() == 1:
+            print(1)
+        else:
+            print(-1)
 
 
-calc = QtWidgets.QApplication(sys.argv)
+calc = QApplication(sys.argv)
 mainWin = Ui()
-
-
 
 if __name__ == "__main__":
     calc.exec()
