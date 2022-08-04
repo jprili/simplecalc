@@ -50,8 +50,7 @@ class Ui(QMainWindow):
         print('graph')
 
 
-calc = QApplication(sys.argv)
-mainWin = Ui()
-
 if __name__ == "__main__":
+    calc = QApplication(sys.argv)
+    mainWin = Ui()
     calc.exec()

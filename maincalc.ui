@@ -46,9 +46,9 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
-    <widget class="QWidget" name="compute">
+    <widget class="QWidget" name="comp">
      <attribute name="title">
       <string>Compute</string>
      </attribute>
@@ -69,7 +69,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="graph">
+    <widget class="QWidget" name="grap">
      <attribute name="title">
       <string>Graph</string>
      </attribute>
