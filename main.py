@@ -5,6 +5,7 @@ import sys
 import sympy
 import numpy as np
 import matplotlib.pyplot as plt
+import datetime
 
 
 class Ui(QMainWindow):
@@ -14,6 +15,10 @@ class Ui(QMainWindow):
         uic.loadUi('maincalc.ui', self)
         self.show()
         self.pushRun.clicked.connect(self.runcalc)
+        self.pushClear.clicked.connect(self.clearLog)
+
+    def clearLog(self):
+        self.plainTextLog.setPlainText("")
 
     def runcalc(self):
         """
@@ -38,7 +43,20 @@ class Ui(QMainWindow):
         EFFECTS: computes arithmetic
         """
 
-        print("compute")
+        try:
+            now = datetime.datetime.now()
+            curr = self.plainTextCom.toPlainText()
+            out = sympy.sympify(str(curr))
+
+            self.plainTextLog.append("\n______ \n" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n" +
+                                              str(curr) + "\n" + str(out))
+
+        except:
+            self.plainTextLog.append("\n______ \n" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n" +
+                                              str(curr) + "\n" + "Error. Try Again")
+
+
+
 
     def graph(self):
         """

@@ -39,6 +39,11 @@
       <height>381</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Andale Mono</family>
+     </font>
+    </property>
     <property name="tabletTracking">
      <bool>false</bool>
     </property>
@@ -46,7 +51,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="comp">
      <attribute name="title">
@@ -60,6 +65,11 @@
         <width>281</width>
         <height>361</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Andale Mono</family>
+       </font>
       </property>
       <property name="cursor" stdset="0">
        <cursorShape>ArrowCursor</cursorShape>
@@ -101,7 +111,7 @@
      <string>Run</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextLog">
+   <widget class="QTextBrowser" name="plainTextLog">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -110,8 +120,29 @@
       <height>201</height>
      </rect>
     </property>
-    <property name="readOnly">
-     <bool>true</bool>
+    <property name="font">
+     <font>
+      <family>Andale Mono</family>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Logs are shown here</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushClear">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>400</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Clear Log</string>
     </property>
    </widget>
   </widget>
