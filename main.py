@@ -48,15 +48,12 @@ class Ui(QMainWindow):
             curr = self.plainTextCom.toPlainText()
             out = sympy.sympify(str(curr))
 
-            self.plainTextLog.append("\n______ \n" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n" +
-                                              str(curr) + "\n" + str(out))
+            self.plainTextLog.append("\n______ \n" + now.strftime("%Y-%m-%d %H:%M:%S") +
+                                     "\n" + str(curr) + "\n" + str(out))
 
         except:
-            self.plainTextLog.append("\n______ \n" + now.strftime("%Y-%m-%d %H:%M:%S") + "\n" +
-                                              str(curr) + "\n" + "Error. Try Again")
-
-
-
+            self.plainTextLog.append("\n______ \n" + now.strftime("%Y-%m-%d %H:%M:%S") +
+                                     "\n" + str(curr) + "\n" + "Error. Try Again")
 
     def graph(self):
         """
@@ -64,8 +61,7 @@ class Ui(QMainWindow):
 
         EFFECTS: displays a graph of the equation
         """
-
-        print('graph')
+        print("graph")
 
 
 if __name__ == "__main__":
