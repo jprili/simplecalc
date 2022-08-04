@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5 import uic
 import sys
 
+import sympy
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -35,20 +36,18 @@ class Ui(QMainWindow):
         REQUIRES: valid compute text
 
         EFFECTS: computes arithmetic
-
-        :return:
         """
-        return None
+
+        print("compute")
 
     def graph(self):
         """
         REQUIRES: valid equation/inequality
 
         EFFECTS: displays a graph of the equation
-
-        :return:
         """
-        return None
+
+        print('graph')
 
 
 calc = QApplication(sys.argv)
